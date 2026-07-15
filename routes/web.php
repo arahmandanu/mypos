@@ -7,11 +7,14 @@ use App\Http\Controllers\Admin\ToppingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PosController;
+use App\Http\Controllers\SystemController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return auth()->check() ? redirect()->route('pos.index') : redirect()->route('login');
 });
+
+Route::get('/system/migrate', [SystemController::class, 'migrate'])->name('system.migrate');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'create'])->name('login');

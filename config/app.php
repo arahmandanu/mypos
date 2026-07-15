@@ -123,4 +123,19 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Remote Migration Endpoint
+    |--------------------------------------------------------------------------
+    |
+    | Serverless deployments (e.g. Vercel) have no shell access to run
+    | `php artisan migrate`, so this exposes a route to trigger it over HTTP.
+    | It stays 404 unless explicitly enabled, and requires a matching token.
+    |
+    */
+
+    'migrate_enabled' => (bool) env('MIGRATE_ENABLED', false),
+
+    'migrate_token' => env('MIGRATE_TOKEN'),
+
 ];
