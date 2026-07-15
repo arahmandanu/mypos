@@ -70,6 +70,11 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ],
+        "vercel": [
+            "npm ci && npm run build",
+            "@php artisan config:cache",
+            "@php artisan route:cache"
         ]
     },
     "extra": {
