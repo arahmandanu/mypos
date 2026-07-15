@@ -23,7 +23,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://mypos-plum.vercel.app",
+        "APP_URL": "https://chickroll-bayat.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -33,6 +33,6 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "ASSET_URL": "https://mypos-plum.vercel.app"
+        "ASSET_URL": "https://chickroll-bayat.vercel.app"
     }
 }
