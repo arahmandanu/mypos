@@ -15,6 +15,7 @@ Route::get('/', function () {
 });
 
 Route::get('/system/migrate', [SystemController::class, 'migrate'])->name('system.migrate');
+Route::get('/system/seed', [SystemController::class, 'seed'])->name('system.seed');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'create'])->name('login');
